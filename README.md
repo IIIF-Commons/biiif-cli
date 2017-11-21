@@ -4,6 +4,6 @@
 
 Uses [BIIIF](https://github.com/edsilv/biiif)
 
-Example:
+## Example:
 
     biiif myfolder -u http://example.com/myfolder

@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "A CLI to Build Static IIIF Collections",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "bin": {
+    "biiif": "./index.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/edsilv/biiif-cli#readme",
   "dependencies": {
-    "biiif": "0.0.13",
+    "biiif": "0.0.14",
     "chalk": "^2.3.0",
     "commander": "^2.11.0"
   }

@@ -1,4 +1,4 @@
-# biiif-cli
+# biiif-cli 👷✨📃
 
 ```
 npm i biiif-cli -g

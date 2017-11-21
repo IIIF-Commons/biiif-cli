@@ -2,7 +2,7 @@
 
     npm i biiif-cli -g
 
-Uses [BIIIF](https://github.com/edsilv/biiif)
+Uses [biiif](https://github.com/edsilv/biiif)
 
 ## Example:
 

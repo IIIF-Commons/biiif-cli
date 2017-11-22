@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/edsilv/biiif-cli#readme",
   "dependencies": {
-    "biiif": "0.0.14",
+    "biiif": "0.0.15",
     "chalk": "^2.3.0",
     "commander": "^2.11.0"
   }

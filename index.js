@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const biiif = require('biiif');
+const { build } = require('biiif');
 const program = require('commander');
 const withErrors = require('./withErrors');
 
@@ -10,5 +10,5 @@ program.arguments('<dir>')
 
 async function exec(env, options) { 
 	const dir = program.args[0];
-	biiif(dir, program.url);
+	build(dir, program.url);
 }

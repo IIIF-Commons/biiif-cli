@@ -25,6 +25,7 @@
   "dependencies": {
     "biiif": "0.1.15",
     "chalk": "^2.3.0",
-    "commander": "^2.11.0"
+    "commander": "^2.11.0",
+    "ncp": "^2.0.0"
   }
 }

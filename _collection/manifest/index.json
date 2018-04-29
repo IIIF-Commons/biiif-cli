@@ -1,0 +1,32 @@
+{
+  "id": "http://test.com/collection/manifest/index.json",
+  "type": "Manifest",
+  "items": [
+    {
+      "type": "Sequence",
+      "items": [
+        {
+          "id": "http://test.com/collection/manifest/index.json/canvas/0",
+          "type": "Canvas",
+          "items": [
+            {
+              "id": "http://test.com/collection/manifest/index.json/canvas/0/annotationpage/0",
+              "type": "AnnotationPage",
+              "items": []
+            }
+          ],
+          "label": {
+            "@none": [
+              "_canvas"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "label": {
+    "@none": [
+      "manifest"
+    ]
+  }
+}

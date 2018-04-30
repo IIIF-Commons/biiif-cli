@@ -16,7 +16,6 @@ Uses [biiif](https://github.com/edsilv/biiif)
 
 The url location of your published collection. All of the IIIF `id` properties are generated using this as the base url.
 
-<!--
 ### `-s`
 
 Scaffolds the following files (if they don't already exist):
@@ -27,4 +26,3 @@ Scaffolds the following files (if they don't already exist):
 - `README.md` - includes a link to index.html
 
 It also creates the folder specified in the `folder` argument. 
--->

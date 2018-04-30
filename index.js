@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const { build } = require('biiif');
 const { exec } = require('child_process');
+const { join } = require('path');
 const fs = require('fs');
 const ncp = require('ncp').ncp;
 const program = require('commander');
@@ -25,16 +26,25 @@ async function execCli(env, options) {
  
 		ncp.limit = 16;
 
-		const scaffoldTarget = './scaffoldtest';
+		const scaffoldTarget = './';
 		
-		ncp('./scaffold', scaffoldTarget, function (err) {
+		ncp('./scaffold', scaffoldTarget, {
+			clobber: false
+		},
+		function (err) {
 			if (err) {
 				return console.error(err);
 			}
 
+			let url = program.url;
+
+			if (url.endsWith('/')) {
+				url = url.substr(0, url.lastIndexOf('/'));
+			}
+
 			// replace [url]
-			await replaceInFile('./README.md', /[url]/g, program.url);
-			await replaceInFile('./index.html', /[url]/g, program.url);
+			replaceInFile(join(scaffoldTarget, 'README.md'), /\[url\]/g, url);
+			replaceInFile(join(scaffoldTarget, 'index.html'), /\[url\]/g, url);
 
 			console.log('finished scaffolding');
 		});
@@ -43,8 +53,8 @@ async function execCli(env, options) {
 	build(dir, program.url);
 }
 
-async function replaceInFile(file, replacetarget, replacewith) {
-	return fs.readFile(file, 'utf8', function (err,data) {
+function replaceInFile(file, replacetarget, replacewith) {
+	fs.readFile(file, 'utf8', function (err,data) {
 		if (err) {
 		    return console.log(err);
 		}

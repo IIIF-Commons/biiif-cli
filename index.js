@@ -26,7 +26,7 @@ async function execCli(env, options) {
  
 		ncp.limit = 16;
 
-		const scaffoldTarget = './scaffoldtest';		
+		const scaffoldTarget = './';		
 		const scaffoldFilesPath = join(__dirname, 'scaffold');
 		
 		ncp(scaffoldFilesPath, scaffoldTarget, {

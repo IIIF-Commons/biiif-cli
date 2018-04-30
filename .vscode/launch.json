@@ -11,8 +11,7 @@
             "program": "${workspaceFolder}/index.js",
             "args": [
                 "collection",
-                "-u", "http://test.com/collection",
-                "-s"
+                "-u", "http://test.com/collection"
             ]
         }
     ]

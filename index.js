@@ -26,7 +26,7 @@ async function execCli(env, options) {
  
 		ncp.limit = 16;
 
-		const scaffoldTarget = './';		
+		const scaffoldTarget = './scaffoldtest';		
 		const scaffoldFilesPath = join(__dirname, 'scaffold');
 		
 		ncp(scaffoldFilesPath, scaffoldTarget, {
@@ -43,9 +43,12 @@ async function execCli(env, options) {
 				url = url.substr(0, url.lastIndexOf('/'));
 			}
 
+			const explorerurl = url.substr(0, url.lastIndexOf('/'));
+			const manifesturl = url + '/index.json';
+
 			// replace [url]
-			replaceInFile(join(scaffoldTarget, 'README.md'), /\[url\]/g, url);
-			replaceInFile(join(scaffoldTarget, 'index.html'), /\[url\]/g, url);
+			replaceInFile(join(scaffoldTarget, 'README.md'), /\[url\]/g, explorerurl);
+			replaceInFile(join(scaffoldTarget, 'index.html'), /\[url\]/g, manifesturl);
 
 			console.log('finished scaffolding');
 		});

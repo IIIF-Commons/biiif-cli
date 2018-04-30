@@ -12,11 +12,11 @@ Uses [biiif](https://github.com/edsilv/biiif)
 
 ## Options
 
-## `-u`
+### `-u`
 
 The url location of your published collection. All of the IIIF `id` properties are generated using this as the base url.
 
-## `-s`
+### `-s`
 
 Scaffolds the following files (if they don't already exist):
 - `.gitignore` - ignores the `node_modules` folder

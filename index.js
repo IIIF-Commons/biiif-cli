@@ -9,6 +9,8 @@ const withErrors = require('./withErrors');
 
 program.arguments('<dir>')
 	.option('-u, --url <url>', 'The url to use as the base of all ids')
+	.option('-g, --generate-thumbs', 'Generate thumbnails')
+	.option('-v, --virtual-name <virtual-name>', 'Use this virtual name for the root directory instead of its actual one when generating paths')
 	.option('-s, --scaffold-files', 'Scaffold files for github pages, netlify')
 	.action(withErrors(execCli))
 	.parse(process.argv);
@@ -54,7 +56,7 @@ async function execCli(env, options) {
 		});
 	}
 
-	build(dir, program.url);
+	build(dir, program.url, program.generateThumbs, program.virtualName);
 }
 
 function replaceInFile(file, replacetarget, replacewith) {

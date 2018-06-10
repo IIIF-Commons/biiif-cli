@@ -11,7 +11,9 @@
             "program": "${workspaceFolder}/index.js",
             "args": [
                 "collection",
-                "-u", "http://username.github.io/repo/collection"
+                "-u", "http://1.1.1.1/somehash",
+                "-v", "somehash",
+                "-g"
             ]
         }
     ]

@@ -56,7 +56,9 @@ async function execCli(env, options) {
 		});
 	}
 
-	build(dir, program.url, program.generateThumbs, program.virtualName);
+	await build(dir, program.url, program.generateThumbs, program.virtualName);
+
+	console.log('biiif-cli exit');
 }
 
 function replaceInFile(file, replacetarget, replacewith) {

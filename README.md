@@ -16,6 +16,14 @@ Uses [biiif](https://github.com/edsilv/biiif)
 
 The url location of your published collection. All of the IIIF `id` properties are generated using this as the base url.
 
+### `-g`
+
+Generate thumbnails for images.
+
+### `-v`
+
+Use this virtual name for the root directory instead of its actual one when generating urls.
+
 ### `-s`
 
 Scaffolds the following files (if they don't already exist):

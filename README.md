@@ -29,7 +29,7 @@ Use this virtual name for the root directory instead of its actual one when gene
 Scaffolds the following files (if they don't already exist):
 - `.gitignore` - ignores the `node_modules` folder
 - `.nojekyll` - disables jekyll to allow folder names starting with an underscore to be served on github pages
-- `_headers` - adds an `Access-Control-Allow-Origin: *` header for netlify.com
+- `netlify.toml` - adds an `Access-Control-Allow-Origin: *` header for netlify.com
 - `index.html` - includes a file explorer to navigate and share the contents of your IIIF collection
 - `README.md` - includes a link to index.html
 

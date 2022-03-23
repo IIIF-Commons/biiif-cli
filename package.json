@@ -1,6 +1,6 @@
 {
   "name": "biiif-cli",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A CLI to Build Static IIIF Collections",
   "main": "index.js",
   "bin": {
@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/edsilv/biiif-cli#readme",
   "dependencies": {
-    "biiif": "1.0.5",
+    "biiif": "1.0.6",
     "chalk": "^2.3.0",
     "commander": "^2.11.0",
     "ncp": "^2.0.0"
